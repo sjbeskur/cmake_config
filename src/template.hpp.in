@@ -1,0 +1,26 @@
+#ifndef CONSTS_HPP
+#define CONSTS_HPP
+
+#include <iostream>
+// this doesn't work ??
+// #cmakereplace SOME_VARIABLE
+
+namespace example
+{
+
+    class MyContrivedClass
+    {
+    public:
+        MyContrivedClass() {}
+        void sayHello()
+        {
+            std::cout << "Hello" << std::endl;
+        }
+
+        float fov_degrees = ${CAMERA_FOV_DEGREES};
+        int catalog_size = ${CATALOG_SIZE};
+    };
+
+} // namespace example
+
+#endif // CONSTS_HPP
